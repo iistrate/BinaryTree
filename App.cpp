@@ -2,7 +2,7 @@
 #include <iostream>
 #include <istream>
 
-void App::start() {
+void App::start(void) {
 	m_running = true;
 	do {
 		std::cout << "Please enter 1 to insert node; 2 for in order; 3 for pre order; 4 for post order: ";

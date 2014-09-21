@@ -5,6 +5,7 @@ class App {
 private:
 	bool m_running;
 	int m_userInput;
+
 	enum {
 		INSERT,
 		PRINT_IN_ORDER,
@@ -12,11 +13,11 @@ private:
 		PRINT_POST_ORDER
 	};
 public:
-	App() : m_running(false), m_userInput(0) {}
-	void quit() {
+	App(void) : m_running(false), m_userInput(0) {}
+	void quit(void) {
 		m_running = false;
 	}
-	void start();
+	void start(void);
 };
 
 #endif
