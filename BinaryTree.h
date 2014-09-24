@@ -1,6 +1,8 @@
 #ifndef BINARY_TREE_H
 #define BINARY_TREE_H
 
+#include <iostream>
+
 class BinaryTree {
 private:
 	class Node {
@@ -30,8 +32,34 @@ private:
 		const int getData(void) const {
 			return m_data;
 		}
-	};
+	}; // end Node class
+
+	int m_count;
+	Node* m_Root;
 public:
-};
+	BinaryTree(void): m_Root(0), m_count(0) {}
+	
+
+	/* Inline
+	*/
+	Node* getRoot(void) {
+		return m_Root;
+	}
+	void setRoot(Node* Root) {
+		m_Root = Root;
+	}
+	//get count
+	int getCount(void) {
+		return m_count;
+	}
+	
+	//Binary.cpp
+	void insertNode(int data);
+	void insertNode(int data, Node* NewNode);
+	void printIn(Node* node);
+	void printPre(Node* node);
+	void printPost(Node* node);
+
+}; // end Binary.H
 
 #endif
